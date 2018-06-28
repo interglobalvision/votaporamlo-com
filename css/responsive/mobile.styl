@@ -1,0 +1,68 @@
+.color-red
+  color: $color-red
+
+.button-holder
+  position: fixed
+  top: 200px
+  &#si
+    left: calc('50vw - 105px')
+  &#no
+    left: calc('50vw + 5px')
+
+button
+  background: $color-red
+  padding: $margin-small 0
+  width: 100px
+  border: none
+  appearance: none
+  color: $color-white
+  font-family: $font-surface
+
+#si button
+  cursor: pointer
+
+#no button:focus
+  outline: none
+
+#marquee
+  background: $color-red
+  color: $color-white
+  font-family: $font-globie
+
+footer#footer
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  font-family: $font-globie
+
+#globie
+  height: 36px
+
+audio
+  width: 100px
+  height: 20px
+  position: absolute
+  left: 0
+  top: 0
+
+#amlo
+  width: 375px
+  height: 500px
+  background-image: url('/img/dist/animation.png')
+  background-position: 0px 0
+  background-size: 800% 100%
+  background-repeat: no-repeat
+  position: absolute
+  top: 200px
+  right: 0
+  opacity: 0
+  transition: opacity 300ms linear
+  &.animate
+    opacity: 1
+    animation: face 1000ms steps(7)
+    animation-fill-mode: forwards
+
+@keyframes face
+  100%
+    background-position: -2625px 0
