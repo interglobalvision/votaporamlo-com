@@ -76,7 +76,7 @@ Site = {
   },
 
   bindFbShare: function() {
-    $('#share-fb').on('click', function() {
+    $('#compartir-fb').on('click', function() {
       FB.ui({
         method: 'share',
         display: 'popup',
@@ -94,7 +94,7 @@ Site = {
   },
 
   showShareButtons: function() {
-    $('#share').fadeIn();
+    $('#compartir').addClass('show');
   },
 
   animateFace: function() {
