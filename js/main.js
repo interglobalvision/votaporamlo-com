@@ -67,13 +67,22 @@ Site = {
 
     $('#si').on('click', function() {
       _this.playAudio();
-      $('#amlo').addClass('animate');
+      _this.updateHeading();
+      _this.animateFace();
     });
   },
 
   playAudio: function() {
     $('audio')[0].play();
   },
+
+  animateFace: function() {
+    $('#amlo').addClass('animate');
+  },
+
+  updateHeading: function() {
+    $('#heading').text('¡No nos decepciones porfis, Peje!');
+  }
 };
 
 jQuery(document).ready(function () {
