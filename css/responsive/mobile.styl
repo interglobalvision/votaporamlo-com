@@ -6,8 +6,10 @@
   top: 300px
   &#si
     left: calc('50vw - 105px')
+    z-index: 300
   &#no
     left: calc('50vw + 5px')
+    z-index: 100
 
 button
   background: $color-red
@@ -20,6 +22,8 @@ button
 
 #si button
   cursor: pointer
+  &:focus
+    outline-color: $color-red
 
 #no button:focus
   outline: none
@@ -35,6 +39,9 @@ footer#footer
   left: 0
   width: 100%
   font-family: $font-globie
+  pointer-events: none
+  a
+    pointer-events: auto
 
 #globie
   height: 36px
