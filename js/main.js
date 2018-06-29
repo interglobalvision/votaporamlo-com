@@ -12,6 +12,7 @@ Site = {
 
     _this.bindDodge();
     _this.bindClick();
+    _this.bindFbShare();
 
     _this.documentHeight = $(document).height();
 
@@ -68,12 +69,27 @@ Site = {
     $('#si').on('click', function() {
       _this.playAudio();
       _this.updateHeading();
+      _this.showShareButtons();
       _this.animateFace();
+    });
+  },
+
+  bindFbShare: function() {
+    $('#share-fb').on('click', function() {
+      FB.ui({
+        method: 'share',
+        display: 'popup',
+        href: 'https://votaporamlo.club',
+      }, function(response){});
     });
   },
 
   playAudio: function() {
     $('audio')[0].play();
+  },
+
+  showShareButtons: function() {
+    $('#share').fadeIn();
   },
 
   animateFace: function() {
@@ -87,6 +103,16 @@ Site = {
 
 jQuery(document).ready(function () {
   'use strict';
+
+  // Load FB
+  $.ajaxSetup({ cache: true });
+  $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+    FB.init({
+      appId: '1033037236853127',
+      version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+    });
+    //FB.getLoginStatus(updateStatusCallback);
+  });
 
   Site.init();
 
