@@ -71,6 +71,7 @@ Site = {
       _this.updateHeading();
       _this.showShareButtons();
       _this.animateFace();
+      _this.vote();
     });
   },
 
@@ -82,6 +83,10 @@ Site = {
         href: 'https://votaporamlo.club',
       }, function(response){});
     });
+  },
+
+  vote: function() {
+    $('#vota').addClass('show');
   },
 
   playAudio: function() {

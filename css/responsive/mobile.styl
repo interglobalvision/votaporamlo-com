@@ -28,6 +28,17 @@ button
 #no button:focus
   outline: none
 
+#vota
+  position: fixed
+  left: calc('50vw - 155px')
+  top: 250px
+  z-index: 400
+  pointer-events: none
+  opacity: 0
+  transition: opacity 500ms linear
+  &.show
+    opacity: 1
+
 #share
   display: none
 
