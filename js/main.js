@@ -102,7 +102,7 @@ Site = {
   },
 
   updateHeading: function() {
-    $('#heading').text('¡No nos decepciones porfis, Peje!');
+    $('#heading').html('<p>¡No nos decepciones,Peje!</p><p>porfis</p>');
   }
 };
 
